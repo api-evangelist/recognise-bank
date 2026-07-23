@@ -1,0 +1,30 @@
+# Recognise Bank
+
+> Recognise Bank Limited is a UK challenger bank for the SME sector and personal/business savings markets, offering fixed-rate, notice and easy-access savings accounts alongside secured SME lending (bridging loans, commercial mortgages). PRA-authorised and FCA-regulated (FRN 849404), FSCS-protected. It does not offer payment/current accounts, is not one of the CMA9, and publishes no dedicated developer portal or confirmed Open Banking API at review time. The UK Open Banking (OBIE / PSD2) specifications are included here as the shared industry standard the bank would conform to if it exposed regulated interfaces — not as confirmed Recognise-operated endpoints.
+
+## APIs (OBIE standard specs — shared standard, not confirmed Recognise endpoints)
+- [UK Open Banking Open Data API (OBIE Standard)](https://github.com/OpenBankingUK/opendata-api-spec-compiled): Public reference data (ATMs, branches, accounts, products).
+- [UK Open Banking Account & Transaction Information API (OBIE Standard)](https://github.com/OpenBankingUK/read-write-api-specs): FAPI-secured AIS Read/Write standard.
+- [UK Open Banking Payment Initiation API (OBIE Standard)](https://github.com/OpenBankingUK/read-write-api-specs): FAPI-secured PIS Read/Write standard.
+- [UK Open Banking Confirmation of Funds API (OBIE Standard)](https://github.com/OpenBankingUK/read-write-api-specs): FAPI-secured CBPII Read/Write standard.
+
+## Specs
+- openapi/obie-opendata-swagger.json — OBIE Open Data (Swagger 2.0)
+- openapi/obie-account-info-openapi.yaml — OBIE Account & Transaction Information (OpenAPI 3.0.0 v4.0)
+- openapi/obie-payment-initiation-openapi.yaml — OBIE Payment Initiation (OpenAPI 3.0.0 v4.0)
+- openapi/obie-confirmation-funds-openapi.yaml — OBIE Confirmation of Funds (OpenAPI 3.0.0 v4.0)
+
+## Artifacts
+- authentication/recognise-bank-authentication.yml — FAPI OAuth2 (TPP clientCredentials + PSU authorizationCode)
+- scopes/recognise-bank-scopes.yml — accounts, payments, fundsconfirmations
+- conventions/recognise-bank-conventions.yml — idempotency (x-idempotency-key), FAPI tracing, pagination, error envelope
+- errors/recognise-bank-error-codes.yml — OBIE OBErrorResponse1 error model
+- conformance/recognise-bank-conformance.yml — oauth2, oidc, fapi, psd2, mutual-tls, idempotency
+- security/recognise-bank-domain-security.yml — TLS/HSTS/SPF/DMARC probe of recognisebank.co.uk
+- security/recognise-bank-vulnerability-disclosure.yml — responsible disclosure policy (security@recognisebank.co.uk)
+
+## Docs
+- [Recognise Bank website](https://recognisebank.co.uk/)
+- [Responsible Disclosure Policy](https://recognisebank.co.uk/responsible-disclosure-policy/)
+- [OBIE Open Data documentation](https://openbanking.org.uk/open-data-apis/)
+- [OBIE Read/Write documentation](https://openbankinguk.github.io/read-write-api-site3/)

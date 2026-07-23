@@ -1,0 +1,30 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/obie-account-info-openapi.yaml, openapi/obie-payment-initiation-openapi.yaml, openapi/obie-confirmation-funds-openapi.yaml
+note: >-
+  Standards conformance derived from the OBIE UK Open Banking Read/Write standard
+  specs wired into this repo, which embody these standards by construction. This
+  is NOT an assertion that Recognise Bank operates a live conformant endpoint;
+  the bank publishes no confirmed Read/Write API surface at review time.
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: OpenAPI securitySchemes declare TPPOAuth2Security (clientCredentials) and PSUOAuth2Security (authorizationCode).
+  - id: oidc
+    conforms: true
+    evidence: OBIE FAPI profile layers OpenID Connect on the authorizationCode flow for PSU authentication.
+  - id: fapi
+    conforms: true
+    evidence: x-fapi-interaction-id / x-fapi-auth-date / x-fapi-customer-ip-address headers and the FAPI-secured OAuth2 profile.
+  - id: psd2
+    conforms: true
+    evidence: PSD2 strong customer authentication modelled via the PSU authorizationCode consent flow (AIS/PIS/CBPII).
+  - id: mutual-tls
+    conforms: true
+    evidence: OBIE/FAPI transport profile mandates mutual-TLS between TPP and ASPSP (transport-layer requirement, not a securityScheme).
+  - id: idempotency
+    conforms: true
+    evidence: x-idempotency-key request header required on OBIE payment-initiation write operations.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use the OBIE OBErrorResponse1 model, not application/problem+json.

@@ -123,6 +123,26 @@ apis:
   - type: APIReference
     url: https://github.com/OpenBankingUK/read-write-api-specs
 common:
+- type: VulnerabilityDisclosure
+  url: security/recognise-bank-vulnerability-disclosure.yml
+- type: Security
+  url: https://recognisebank.co.uk/responsible-disclosure-policy/
+- type: DomainSecurity
+  url: security/recognise-bank-domain-security.yml
+- type: OAuthScopes
+  url: scopes/recognise-bank-scopes.yml
+- type: Authentication
+  url: authentication/recognise-bank-authentication.yml
+- type: Conventions
+  url: conventions/recognise-bank-conventions.yml
+- type: Idempotency
+  url: conventions/recognise-bank-conventions.yml
+- type: ErrorCatalog
+  url: errors/recognise-bank-error-codes.yml
+- type: Conformance
+  url: conformance/recognise-bank-conformance.yml
+- type: LLMsTxt
+  url: llms/recognise-bank-llms.txt
 - type: Website
   url: https://recognisebank.co.uk/
 - type: LinkedIn

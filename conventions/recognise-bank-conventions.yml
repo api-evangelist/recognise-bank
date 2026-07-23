@@ -1,0 +1,39 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/obie-account-info-openapi.yaml, openapi/obie-payment-initiation-openapi.yaml, openapi/obie-confirmation-funds-openapi.yaml
+note: >-
+  Cross-cutting request/response conventions derived from the OBIE UK Open
+  Banking Read/Write standard specs wired into this repo. These reflect the
+  shared OBIE contract, NOT a confirmed Recognise Bank-operated API surface.
+authentication:
+  style: FAPI-secured OAuth2 / OIDC
+  flows: [authorizationCode, clientCredentials]
+  scopes: [accounts, payments, fundsconfirmations]
+  transport_security: mutual-TLS (required by the OBIE/FAPI profile at the transport layer)
+  strong_customer_authentication: PSD2 SCA via the authorizationCode (PSU) flow
+  reference: authentication/recognise-bank-authentication.yml
+idempotency:
+  supported: true
+  mechanism: request header
+  header: x-idempotency-key
+  scope: payment-initiation and other write operations across the OBIE Read/Write specs
+  note: >-
+    The OBIE Payment Initiation operations require an x-idempotency-key header so
+    a retried POST is not double-processed; retention/uniqueness window is defined
+    by the ASPSP implementation.
+request_tracing:
+  header: x-fapi-interaction-id
+  note: FAPI interaction id echoed on responses for correlation; also x-fapi-auth-date and x-fapi-customer-ip-address on requests.
+pagination:
+  style: link-based
+  response_fields: [Links.First, Links.Prev, Links.Next, Links.Last, Meta.TotalPages]
+  note: OBIE responses carry a Links object and a Meta object for page navigation and totals.
+error_envelope:
+  schema: OBErrorResponse1
+  reference: errors/recognise-bank-error-codes.yml
+rate_limit_signaling:
+  status: 429
+  note: ASPSP fair-usage / traffic-management returns HTTP 429; specific rate-limit headers are ASPSP-defined and not fixed by the OBIE spec.
+versioning:
+  scheme: uri-path
+  note: Version carried in the path (e.g. /open-banking/v4.0/aisp); Open Data uses /open-banking/v2.3.

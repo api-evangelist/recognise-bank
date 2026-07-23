@@ -1,0 +1,59 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/obie-account-info-openapi.yaml, openapi/obie-payment-initiation-openapi.yaml, openapi/obie-confirmation-funds-openapi.yaml
+note: >-
+  Error model derived from the OBIE UK Open Banking Read/Write standard specs
+  wired into this repo. These describe the shared OBIE error contract the bank
+  would conform to if it exposed regulated Read/Write interfaces, NOT a
+  confirmed Recognise Bank-operated API. Recognise Bank publishes no dedicated
+  developer error reference at review time.
+format: obie-oberror
+envelope:
+  schema: OBErrorResponse1
+  fields:
+    Code: Deprecated high-level textual error code categorising the errors (e.g. "400 BadRequest").
+    Id: Unique reference for the error instance, for audit purposes.
+    Message: Deprecated brief error message.
+    Errors: Array of OBError1 detail objects.
+  detail_schema: OBError1
+  detail_fields:
+    ErrorCode: Low-level 4-char textual error code from the OBIE OBExternalStatusReason1Code code set (e.g. U001).
+    Message: Human-readable description of the error (not standardised by OBL).
+    Path: Optional JSON Path of the field in error (e.g. Data.Initiation.InstructedAmount.Currency).
+    Url: Optional URL to remediation guidance or API reference.
+  code_set: https://github.com/OpenBankingUK/External_Internal_CodeSets
+# HTTP status classes present across the harvested OBIE specs (response counts observed).
+http_statuses:
+  - status: 400
+    title: Bad Request
+    meaning: Request failed validation; body returns an OBErrorResponse1 with detail OBError1[] and JSON Paths.
+  - status: 401
+    title: Unauthorized
+    meaning: Missing/invalid access token or failed FAPI/SCA authentication.
+  - status: 403
+    title: Forbidden
+    meaning: Token lacks the required scope or consent for the resource.
+  - status: 404
+    title: Not Found
+    meaning: Resource (e.g. ConsentId, AccountId, payment resource) does not exist.
+  - status: 405
+    title: Method Not Allowed
+    meaning: HTTP method not supported on the resource.
+  - status: 406
+    title: Not Acceptable
+    meaning: Requested media type not supported.
+  - status: 409
+    title: Conflict
+    meaning: State conflict, e.g. resource already exists or idempotency-key reuse mismatch.
+  - status: 415
+    title: Unsupported Media Type
+    meaning: Request Content-Type not supported.
+  - status: 422
+    title: Unprocessable Entity
+    meaning: Semantically invalid request (e.g. business-rule violation); OBErrorResponse1 detail codes explain why.
+  - status: 429
+    title: Too Many Requests
+    meaning: Rate limit exceeded (ASPSP fair-usage / traffic management).
+  - status: 500
+    title: Internal Server Error
+    meaning: Unexpected ASPSP server error; OBErrorResponse1.Id references the incident for audit.
