@@ -1,0 +1,88 @@
+aid: recognise-bank
+name: Recognise Bank
+review:
+  question: Does Recognise Bank expose a public developer portal or confirmed UK Open Banking (OBIE) API surface?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Recognise Bank Limited (FRN 849404, PRA-authorised / FCA-regulated) is a UK
+    SME and savings bank. It offers personal and business savings accounts and
+    secured SME lending (bridging loans, commercial mortgages) but does NOT
+    offer payment or current accounts, so it is not one of the CMA9 and carries
+    no visible PSD2 Open Banking mandate. No public developer portal, API
+    catalogue, Open Data endpoint, or Read/Write API surface was found at review
+    time. The bank is not listed on the Open Banking tracker directory
+    (HTTP 404). The public marketing site (recognisebank.co.uk, HTTP 200) has no
+    developer / API / Open Banking pages.
+  openDataConfirmed: false
+  openDataProbes:
+    - url: https://recognisebank.co.uk/open-banking/v2.3/atms
+      status: 404
+    - url: https://recognisebank.co.uk/open-banking/v2.3/branches
+      status: 404
+    - url: https://recognisebank.co.uk/.well-known/open-banking/payment-initiation
+      status: 404
+  hostResolution:
+    - host: https://api.recognisebank.co.uk/
+      status: does-not-resolve
+    - host: https://developer.recognisebank.co.uk/
+      status: does-not-resolve
+  readWriteConformance:
+    documented: false
+    note: |
+      No bank-specific AIS/PIS/CBPII contract is published by Recognise Bank.
+      The OBIE Read/Write standard specifications (v4.0) were harvested verbatim
+      as the shared industry standard and are represented in apis.yml as OBIE
+      Standard entries, NOT as Recognise-operated endpoints.
+    authModel: FAPI OAuth2/OIDC + mutual-TLS + PSD2 strong customer authentication (per OBIE standard, not confirmed live for this bank)
+  specProvenance:
+    - file: openapi/obie-opendata-swagger.json
+      source: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+      kind: OBIE-standard
+      note: UK Open Banking Open Data API, Swagger 2.0. Shared standard, not a Recognise Bank contract.
+    - file: openapi/obie-account-info-openapi.yaml
+      source: https://github.com/OpenBankingUK/read-write-api-specs
+      kind: OBIE-standard
+      note: OBIE Read/Write Account & Transaction Information (AIS) OpenAPI 3.0.0 v4.0. Shared standard.
+    - file: openapi/obie-payment-initiation-openapi.yaml
+      source: https://github.com/OpenBankingUK/read-write-api-specs
+      kind: OBIE-standard
+      note: OBIE Read/Write Payment Initiation (PIS) OpenAPI 3.0.0 v4.0. Shared standard.
+    - file: openapi/obie-confirmation-funds-openapi.yaml
+      source: https://github.com/OpenBankingUK/read-write-api-specs
+      kind: OBIE-standard
+      note: OBIE Read/Write Confirmation of Funds (CBPII) OpenAPI 3.0.0 v4.0. Shared standard.
+  transports:
+    - protocol: REST
+      scheme: https
+      note: OBIE standard surfaces are REST/HTTPS. No Recognise-operated base URL confirmed; standard relative server paths only (/open-banking/v2.3, /open-banking/v4.0/*).
+      documented: false
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket surface documented or applicable.
+sources:
+  - url: https://recognisebank.co.uk/
+    type: Website
+    status: 200
+    note: Corporate/marketing site; savings + SME lending products; no developer or API pages.
+  - url: https://www.openbankingtracker.com/provider/recognise-bank
+    type: Directory
+    status: 404
+    note: Recognise Bank not listed in the Open Banking tracker provider directory.
+  - url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+    type: APIReference
+    note: Source of the harvested OBIE Open Data standard spec.
+  - url: https://github.com/OpenBankingUK/read-write-api-specs
+    type: APIReference
+    note: Source of the harvested OBIE Read/Write standard specs (AIS/PIS/CBPII).
+actions:
+  status: built-stub
+  reason: |
+    Identity captured from real public sources; the OBIE Open Data and
+    Read/Write standard specifications were harvested verbatim and clearly
+    labelled as the shared industry standard. No Recognise Bank-specific
+    developer portal, Open Data endpoint, or Read/Write host was confirmed, so
+    no proprietary base URL or credentials were fabricated.
