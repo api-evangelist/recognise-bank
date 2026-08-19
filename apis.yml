@@ -43,7 +43,7 @@ tags:
 - Account Information
 created: '2026-07-23'
 modified: '2026-07-23'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: recognise-bank:uk-open-banking-open-data-api
   name: UK Open Banking Open Data API (OBIE Standard)
