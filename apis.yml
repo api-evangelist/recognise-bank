@@ -56,79 +56,636 @@ created: '2026-07-23'
 modified: '2026-07-23'
 specificationVersion: '0.23'
 apis:
-- aid: recognise-bank:uk-open-banking-open-data-api
-  name: UK Open Banking Open Data API (OBIE Standard)
+- aid: recognise-bank:recognise-bank-account-access-consents-api
+  name: Recognise Bank Account Access Consents API
   description: >-
-    Shared UK Open Banking Open Data standard for public, unauthenticated
-    reference data (ATMs, branches, personal and business current accounts,
-    unsecured SME loans, commercial credit cards). Included as the OBIE standard
-    surface; Recognise Bank does not publish a confirmed Open Data endpoint and
-    probes to the standard path shape on recognisebank.co.uk returned HTTP 404.
+    The Account Access Consents API from Recognise Bank — 2 operation(s) for account access consents.
   humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
   baseURL: /open-banking/v2.3
   tags:
-  - Open Data
-  - Reference Data
+  - Account Access Consents
   properties:
   - type: OpenAPI
-    url: openapi/obie-opendata-swagger.json
+    url: openapi/recognise-bank-account-access-consents-api-openapi.yml
   - type: Documentation
     url: https://openbanking.org.uk/open-data-apis/
   - type: APIReference
     url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
-- aid: recognise-bank:uk-open-banking-account-information-api
-  name: UK Open Banking Account & Transaction Information API (OBIE Standard)
-  description: >-
-    Shared OBIE Read/Write Account & Transaction Information (AIS) standard,
-    FAPI-secured with OAuth2/OIDC, mutual-TLS, and PSD2 strong customer
-    authentication. Included as the OBIE v4.0 standard specification, not a
-    confirmed Recognise Bank contract; no Recognise developer portal or AIS host
-    was found at review time.
-  humanURL: https://github.com/OpenBankingUK/read-write-api-specs
-  baseURL: /open-banking/v4.0/aisp
-  tags:
-  - Account Information
-  - AIS
-  properties:
-  - type: OpenAPI
-    url: openapi/obie-account-info-openapi.yaml
   - type: Documentation
     url: https://openbankinguk.github.io/read-write-api-site3/
   - type: APIReference
     url: https://github.com/OpenBankingUK/read-write-api-specs
-- aid: recognise-bank:uk-open-banking-payment-initiation-api
-  name: UK Open Banking Payment Initiation API (OBIE Standard)
-  description: >-
-    Shared OBIE Read/Write Payment Initiation (PIS) standard, FAPI-secured with
-    OAuth2/OIDC, mutual-TLS, and PSD2 SCA. Included as the OBIE v4.0 standard
-    specification, not a confirmed Recognise Bank contract; Recognise does not
-    offer payment/current accounts and exposes no confirmed PIS surface.
-  humanURL: https://github.com/OpenBankingUK/read-write-api-specs
-  baseURL: /open-banking/v4.0/pisp
+- aid: recognise-bank:recognise-bank-accounts-api
+  name: Recognise Bank Accounts API
+  description: The Accounts API from Recognise Bank — 2 operation(s) for accounts.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
   tags:
-  - Payment Initiation
-  - PIS
+  - Accounts
   properties:
   - type: OpenAPI
-    url: openapi/obie-payment-initiation-openapi.yaml
+    url: openapi/recognise-bank-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
   - type: Documentation
     url: https://openbankinguk.github.io/read-write-api-site3/
   - type: APIReference
     url: https://github.com/OpenBankingUK/read-write-api-specs
-- aid: recognise-bank:uk-open-banking-confirmation-of-funds-api
-  name: UK Open Banking Confirmation of Funds API (OBIE Standard)
-  description: >-
-    Shared OBIE Read/Write Confirmation of Funds (CBPII) standard, FAPI-secured
-    with OAuth2/OIDC, mutual-TLS, and PSD2 SCA. Included as the OBIE v4.0
-    standard specification, not a confirmed Recognise Bank contract.
-  humanURL: https://github.com/OpenBankingUK/read-write-api-specs
-  baseURL: /open-banking/v4.0/cbpii
+- aid: recognise-bank:recognise-bank-atm-api
+  name: Recognise Bank ATM API
+  description: Endpoint for getting ATM data
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
   tags:
-  - Confirmation of Funds
-  - CBPII
+  - ATM
   properties:
   - type: OpenAPI
-    url: openapi/obie-confirmation-funds-openapi.yaml
+    url: openapi/recognise-bank-atm-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-balances-api
+  name: Recognise Bank Balances API
+  description: The Balances API from Recognise Bank — 2 operation(s) for balances.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Balances
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-balances-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-bca-api
+  name: Recognise Bank BCA API
+  description: Endpoint for getting Business Current Account data
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - BCA
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-bca-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-beneficiaries-api
+  name: Recognise Bank Beneficiaries API
+  description: The Beneficiaries API from Recognise Bank — 2 operation(s) for beneficiaries.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Beneficiaries
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-beneficiaries-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-branch-api
+  name: Recognise Bank Branch API
+  description: Endpoint for getting Branch data
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Branch
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-branch-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-ccc-api
+  name: Recognise Bank CCC API
+  description: Endpoint for getting Commercial Credit Card data
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - CCC
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-ccc-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-direct-debits-api
+  name: Recognise Bank Direct Debits API
+  description: The Direct Debits API from Recognise Bank — 2 operation(s) for direct debits.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Direct Debits
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-direct-debits-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-domestic-payment-consents-api
+  name: Recognise Bank Domestic Payment Consents API
+  description: >-
+    The Domestic Payment Consents API from Recognise Bank — 3 operation(s) for domestic payment consents.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Domestic Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-domestic-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-domestic-payments-api
+  name: Recognise Bank Domestic Payments API
+  description: The Domestic Payments API from Recognise Bank — 3 operation(s) for domestic payments.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Domestic Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-domestic-payments-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-domestic-scheduled-payment-consents-api
+  name: Recognise Bank Domestic Scheduled Payment Consents API
+  description: >-
+    The Domestic Scheduled Payment Consents API from Recognise Bank — 2 operation(s) for domestic scheduled
+    payment consents.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Domestic Scheduled Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-domestic-scheduled-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-domestic-scheduled-payments-api
+  name: Recognise Bank Domestic Scheduled Payments API
+  description: >-
+    The Domestic Scheduled Payments API from Recognise Bank — 3 operation(s) for domestic scheduled payments.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Domestic Scheduled Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-domestic-scheduled-payments-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-domestic-standing-order-consents-api
+  name: Recognise Bank Domestic Standing Order Consents API
+  description: >-
+    The Domestic Standing Order Consents API from Recognise Bank — 2 operation(s) for domestic standing
+    order consents.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Domestic Standing Order Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-domestic-standing-order-consents-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-domestic-standing-orders-api
+  name: Recognise Bank Domestic Standing Orders API
+  description: >-
+    The Domestic Standing Orders API from Recognise Bank — 3 operation(s) for domestic standing orders.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Domestic Standing Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-domestic-standing-orders-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-file-payment-consents-api
+  name: Recognise Bank File Payment Consents API
+  description: >-
+    The File Payment Consents API from Recognise Bank — 3 operation(s) for file payment consents.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - File Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-file-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-file-payments-api
+  name: Recognise Bank File Payments API
+  description: The File Payments API from Recognise Bank — 4 operation(s) for file payments.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - File Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-file-payments-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-funds-confirmation-consents-api
+  name: Recognise Bank Funds Confirmation Consents API
+  description: >-
+    The Funds Confirmation Consents API from Recognise Bank — 2 operation(s) for funds confirmation consents.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Funds Confirmation Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-funds-confirmation-consents-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-funds-confirmations-api
+  name: Recognise Bank Funds Confirmations API
+  description: >-
+    The Funds Confirmations API from Recognise Bank — 1 operation(s) for funds confirmations.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Funds Confirmations
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-funds-confirmations-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-international-payment-consents-api
+  name: Recognise Bank International Payment Consents API
+  description: >-
+    The International Payment Consents API from Recognise Bank — 3 operation(s) for international payment
+    consents.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - International Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-international-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-international-payments-api
+  name: Recognise Bank International Payments API
+  description: >-
+    The International Payments API from Recognise Bank — 3 operation(s) for international payments.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - International Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-international-payments-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-international-scheduled-payments-api
+  name: Recognise Bank International Scheduled Payments API
+  description: >-
+    The International Scheduled Payments API from Recognise Bank — 3 operation(s) for international scheduled
+    payments.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - International Scheduled Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-international-scheduled-payments-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-international-scheduled-payments-consents-api
+  name: Recognise Bank International Scheduled Payments Consents API
+  description: >-
+    The International Scheduled Payments Consents API from Recognise Bank — 3 operation(s) for international
+    scheduled payments consents.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - International Scheduled Payments Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-international-scheduled-payments-consents-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-international-standing-orders-api
+  name: Recognise Bank International Standing Orders API
+  description: >-
+    The International Standing Orders API from Recognise Bank — 3 operation(s) for international standing
+    orders.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - International Standing Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-international-standing-orders-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-international-standing-orders-consents-api
+  name: Recognise Bank International Standing Orders Consents API
+  description: >-
+    The International Standing Orders Consents API from Recognise Bank — 2 operation(s) for international
+    standing orders consents.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - International Standing Orders Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-international-standing-orders-consents-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-offers-api
+  name: Recognise Bank Offers API
+  description: The Offers API from Recognise Bank — 2 operation(s) for offers.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Offers
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-offers-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-parties-api
+  name: Recognise Bank Parties API
+  description: The Parties API from Recognise Bank — 3 operation(s) for parties.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Parties
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-parties-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-pca-api
+  name: Recognise Bank PCA API
+  description: Endpoint for getting Personal Current Account data
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - PCA
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-pca-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-products-api
+  name: Recognise Bank Products API
+  description: The Products API from Recognise Bank — 2 operation(s) for products.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-products-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-scheduled-payments-api
+  name: Recognise Bank Scheduled Payments API
+  description: The Scheduled Payments API from Recognise Bank — 2 operation(s) for scheduled payments.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Scheduled Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-scheduled-payments-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-sme-api
+  name: Recognise Bank SME API
+  description: Endpoint for getting Unsecured SME Loan data
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - SME
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-sme-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-standing-orders-api
+  name: Recognise Bank Standing Orders API
+  description: The Standing Orders API from Recognise Bank — 2 operation(s) for standing orders.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Standing Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-standing-orders-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-statements-api
+  name: Recognise Bank Statements API
+  description: The Statements API from Recognise Bank — 5 operation(s) for statements.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Statements
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-statements-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: recognise-bank:recognise-bank-transactions-api
+  name: Recognise Bank Transactions API
+  description: The Transactions API from Recognise Bank — 2 operation(s) for transactions.
+  humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+  baseURL: /open-banking/v2.3
+  tags:
+  - Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/recognise-bank-transactions-api-openapi.yml
+  - type: Documentation
+    url: https://openbanking.org.uk/open-data-apis/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
   - type: Documentation
     url: https://openbankinguk.github.io/read-write-api-site3/
   - type: APIReference
