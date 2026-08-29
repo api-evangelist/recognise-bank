@@ -17,6 +17,18 @@ description: >-
   represented here as the shared industry standard the bank would conform to if
   it exposed regulated account and payment interfaces, not as confirmed
   Recognise-operated endpoints.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -691,6 +703,9 @@ apis:
   - type: APIReference
     url: https://github.com/OpenBankingUK/read-write-api-specs
 common:
+- type: CapabilityMap
+  url: capabilities/recognise-bank-capability-edges.yml
+  name: Recognise Bank Business Capability Map
 - type: VulnerabilityDisclosure
   url: security/recognise-bank-vulnerability-disclosure.yml
 - type: Security
