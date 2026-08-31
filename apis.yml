@@ -93,6 +93,8 @@ apis:
   humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
   baseURL: /open-banking/v2.3
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -600,6 +602,8 @@ apis:
   humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
   baseURL: /open-banking/v2.3
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
@@ -690,6 +694,8 @@ apis:
   humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
   baseURL: /open-banking/v2.3
   tags:
+  - Transaction
+  tags_raw:
   - Transactions
   properties:
   - type: OpenAPI
