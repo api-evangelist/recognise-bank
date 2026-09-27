@@ -43,7 +43,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Open Banking
 - PSD2
@@ -64,6 +64,7 @@ tags_raw:
 - SME Lending
 - Fintech
 - Account Information
+- Financial-Services
 created: '2026-07-23'
 modified: '2026-07-23'
 specificationVersion: '0.23'
@@ -640,6 +641,8 @@ apis:
   humanURL: https://github.com/OpenBankingUK/opendata-api-spec-compiled
   baseURL: /open-banking/v2.3
   tags:
+  - Small Business
+  tags_raw:
   - SME
   properties:
   - type: OpenAPI
