@@ -1,4 +1,4 @@
-# Recognise Bank (recognise-bank)
+# Recognise Bank
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,112 +64,134 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Recognise Bank Limited is a UK challenger bank focused on the SME sector and the personal and business savings markets, offering fixed-rate, notice, and easy-access savings accounts alongside secured SME lending such as bridging loans and commercial mortgages. Formed out of AIM-listed City of London Group and now majority owned by Gibraltar-based Parasol V27 Limited, it is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority under FRN 849404, with deposits protected by the FSCS.
+Recognise Bank Limited is a UK challenger bank focused on the SME sector and the personal and business savings markets, offering fixed-rate, notice, and easy-access savings accounts alongside secured SME lending such as bridging loans and commercial mortgages. Formed out of AIM-listed City of London Group and now majority owned by Gibraltar-based Parasol V27 Limited (the Ruth Parasol family office), it is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority under FRN 849404, with deposits protected by the FSCS. As a deposit-and-lending institution that does not offer payment/current accounts, Recognise Bank is not one of the CMA9 and publishes no dedicated developer portal, Open Banking Open Data endpoint, or Read/Write API surface at review time; the UK Open Banking (OBIE / PSD2) API families are represented here as the shared industry standard the bank would conform to if it exposed regulated account and payment interfaces, not as confirmed Recognise-operated endpoints.
 
-As a deposit-and-lending institution that does not offer payment/current accounts, Recognise Bank is not one of the CMA9 and publishes no dedicated developer portal, Open Banking Open Data endpoint, or Read/Write API surface at review time. The UK Open Banking (OBIE / PSD2) API families below are represented as the shared industry standard the bank would conform to if it exposed regulated account and payment interfaces — not as confirmed Recognise-operated endpoints.
+**Areas:** Financial Services · Banking · Open Banking · PSD2 · OBIE · United Kingdom · Savings · SME Lending · Fintech · Account Information
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/recognise-bank/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/recognise-bank/refs/heads/main/apis.yml)
+## Recognise Bank on APIs.io
 
-## Tags
+Everything profiled for Recognise Bank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/recognise-bank/](https://apis.io/providers/recognise-bank/)** — or go straight to one of the APIs or properties below.
 
-- Financial Services
-- Banking
-- Open Banking
-- PSD2
-- OBIE
-- United Kingdom
-- Savings
-- SME Lending
-- Fintech
-- Account Information
+### APIs (34)
 
-## Timestamps
+- [Recognise Bank Account Access Consents API](https://apis.io/apis/recognise-bank/recognise-bank-account-access-consents-api/) — The Account Access Consents API from Recognise Bank — 2 operation(s) for account access consents.
+- [Recognise Bank Accounts API](https://apis.io/apis/recognise-bank/recognise-bank-accounts-api/) — The Accounts API from Recognise Bank — 2 operation(s) for accounts.
+- [Recognise Bank ATM API](https://apis.io/apis/recognise-bank/recognise-bank-atm-api/) — Endpoint for getting ATM data
+- [Recognise Bank Balances API](https://apis.io/apis/recognise-bank/recognise-bank-balances-api/) — The Balances API from Recognise Bank — 2 operation(s) for balances.
+- [Recognise Bank BCA API](https://apis.io/apis/recognise-bank/recognise-bank-bca-api/) — Endpoint for getting Business Current Account data
+- [Recognise Bank Beneficiaries API](https://apis.io/apis/recognise-bank/recognise-bank-beneficiaries-api/) — The Beneficiaries API from Recognise Bank — 2 operation(s) for beneficiaries.
+- [Recognise Bank Branch API](https://apis.io/apis/recognise-bank/recognise-bank-branch-api/) — Endpoint for getting Branch data
+- [Recognise Bank CCC API](https://apis.io/apis/recognise-bank/recognise-bank-ccc-api/) — Endpoint for getting Commercial Credit Card data
+- [Recognise Bank Direct Debits API](https://apis.io/apis/recognise-bank/recognise-bank-direct-debits-api/) — The Direct Debits API from Recognise Bank — 2 operation(s) for direct debits.
+- [Recognise Bank Domestic Payment Consents API](https://apis.io/apis/recognise-bank/recognise-bank-domestic-payment-consents-api/) — The Domestic Payment Consents API from Recognise Bank — 3 operation(s) for domestic payment consents.
+- [Recognise Bank Domestic Payments API](https://apis.io/apis/recognise-bank/recognise-bank-domestic-payments-api/) — The Domestic Payments API from Recognise Bank — 3 operation(s) for domestic payments.
+- [Recognise Bank Domestic Scheduled Payment Consents API](https://apis.io/apis/recognise-bank/recognise-bank-domestic-scheduled-payment-consents-api/) — The Domestic Scheduled Payment Consents API from Recognise Bank — 2 operation(s) for domestic scheduled payment consents.
+- [Recognise Bank Domestic Scheduled Payments API](https://apis.io/apis/recognise-bank/recognise-bank-domestic-scheduled-payments-api/) — The Domestic Scheduled Payments API from Recognise Bank — 3 operation(s) for domestic scheduled payments.
+- [Recognise Bank Domestic Standing Order Consents API](https://apis.io/apis/recognise-bank/recognise-bank-domestic-standing-order-consents-api/) — The Domestic Standing Order Consents API from Recognise Bank — 2 operation(s) for domestic standing order consents.
+- [Recognise Bank Domestic Standing Orders API](https://apis.io/apis/recognise-bank/recognise-bank-domestic-standing-orders-api/) — The Domestic Standing Orders API from Recognise Bank — 3 operation(s) for domestic standing orders.
+- [Recognise Bank File Payment Consents API](https://apis.io/apis/recognise-bank/recognise-bank-file-payment-consents-api/) — The File Payment Consents API from Recognise Bank — 3 operation(s) for file payment consents.
+- [Recognise Bank File Payments API](https://apis.io/apis/recognise-bank/recognise-bank-file-payments-api/) — The File Payments API from Recognise Bank — 4 operation(s) for file payments.
+- [Recognise Bank Funds Confirmation Consents API](https://apis.io/apis/recognise-bank/recognise-bank-funds-confirmation-consents-api/) — The Funds Confirmation Consents API from Recognise Bank — 2 operation(s) for funds confirmation consents.
+- [Recognise Bank Funds Confirmations API](https://apis.io/apis/recognise-bank/recognise-bank-funds-confirmations-api/) — The Funds Confirmations API from Recognise Bank — 1 operation(s) for funds confirmations.
+- [Recognise Bank International Payment Consents API](https://apis.io/apis/recognise-bank/recognise-bank-international-payment-consents-api/) — The International Payment Consents API from Recognise Bank — 3 operation(s) for international payment consents.
+- [Recognise Bank International Payments API](https://apis.io/apis/recognise-bank/recognise-bank-international-payments-api/) — The International Payments API from Recognise Bank — 3 operation(s) for international payments.
+- [Recognise Bank International Scheduled Payments API](https://apis.io/apis/recognise-bank/recognise-bank-international-scheduled-payments-api/) — The International Scheduled Payments API from Recognise Bank — 3 operation(s) for international scheduled payments.
+- [Recognise Bank International Scheduled Payments Consents API](https://apis.io/apis/recognise-bank/recognise-bank-international-scheduled-payments-consents-api/) — The International Scheduled Payments Consents API from Recognise Bank — 3 operation(s) for international scheduled payments consents.
+- [Recognise Bank International Standing Orders API](https://apis.io/apis/recognise-bank/recognise-bank-international-standing-orders-api/) — The International Standing Orders API from Recognise Bank — 3 operation(s) for international standing orders.
+- [Recognise Bank International Standing Orders Consents API](https://apis.io/apis/recognise-bank/recognise-bank-international-standing-orders-consents-api/) — The International Standing Orders Consents API from Recognise Bank — 2 operation(s) for international standing orders consents.
+- [Recognise Bank Offers API](https://apis.io/apis/recognise-bank/recognise-bank-offers-api/) — The Offers API from Recognise Bank — 2 operation(s) for offers.
+- [Recognise Bank Parties API](https://apis.io/apis/recognise-bank/recognise-bank-parties-api/) — The Parties API from Recognise Bank — 3 operation(s) for parties.
+- [Recognise Bank PCA API](https://apis.io/apis/recognise-bank/recognise-bank-pca-api/) — Endpoint for getting Personal Current Account data
+- [Recognise Bank Products API](https://apis.io/apis/recognise-bank/recognise-bank-products-api/) — The Products API from Recognise Bank — 2 operation(s) for products.
+- [Recognise Bank Scheduled Payments API](https://apis.io/apis/recognise-bank/recognise-bank-scheduled-payments-api/) — The Scheduled Payments API from Recognise Bank — 2 operation(s) for scheduled payments.
+- [Recognise Bank SME API](https://apis.io/apis/recognise-bank/recognise-bank-sme-api/) — Endpoint for getting Unsecured SME Loan data
+- [Recognise Bank Standing Orders API](https://apis.io/apis/recognise-bank/recognise-bank-standing-orders-api/) — The Standing Orders API from Recognise Bank — 2 operation(s) for standing orders.
+- [Recognise Bank Statements API](https://apis.io/apis/recognise-bank/recognise-bank-statements-api/) — The Statements API from Recognise Bank — 5 operation(s) for statements.
+- [Recognise Bank Transactions API](https://apis.io/apis/recognise-bank/recognise-bank-transactions-api/) — The Transactions API from Recognise Bank — 2 operation(s) for transactions.
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-> The following are the shared UK Open Banking (OBIE) standard specifications, harvested verbatim from the Open Banking UK repositories and clearly labelled as the industry standard. No Recognise Bank-specific host, developer portal, or confirmed endpoint was found; probes to standard Open Data paths on `recognisebank.co.uk` returned HTTP 404, and `api.` / `developer.` subdomains do not resolve.
+#### Collections (1)
 
-### UK Open Banking Open Data API (OBIE Standard)
+Postman and Open Collection request collections.
 
-Shared UK Open Banking Open Data standard for public, unauthenticated reference data (ATMs, branches, personal and business current accounts, unsecured SME loans, commercial credit cards).
+- [Open Data API](https://apis.io/collections/recognise-bank/open-obie-opendata-swagger/)
 
-- **Human URL:** [https://github.com/OpenBankingUK/opendata-api-spec-compiled](https://github.com/OpenBankingUK/opendata-api-spec-compiled)
-- **Base URL (standard path):** `/open-banking/v2.3`
+#### Security (3)
 
-#### Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Open Data
-- Reference Data
+- [Recognise Bank Authentication](https://apis.io/security/recognise-bank/recognise-bank-authentication/)
+- [Recognise Bank Domain Security](https://apis.io/security/recognise-bank/recognise-bank-domain-security/)
+- [Recognise Bank Vulnerability Disclosure](https://apis.io/security/recognise-bank/recognise-bank-vulnerability-disclosure/)
 
-#### Properties
+#### OAuth scopes (1)
 
-- [OpenAPI](openapi/obie-opendata-swagger.json) — OBIE Open Data (Swagger 2.0), shared standard
-- [Documentation](https://openbanking.org.uk/open-data-apis/)
+The permissions the API asks for.
 
-### UK Open Banking Account & Transaction Information API (OBIE Standard)
+- [Recognise Bank Scopes](https://apis.io/scopes/recognise-bank/recognise-bank-scopes/)
 
-Shared OBIE Read/Write Account & Transaction Information (AIS) standard, FAPI-secured with OAuth2/OIDC, mutual-TLS, and PSD2 strong customer authentication.
+## Where to find this API
 
-- **Human URL:** [https://github.com/OpenBankingUK/read-write-api-specs](https://github.com/OpenBankingUK/read-write-api-specs)
-- **Base URL (standard path):** `/open-banking/v4.0/aisp`
-
-#### Tags
-
-- Account Information
-- AIS
-
-#### Properties
-
-- [OpenAPI](openapi/obie-account-info-openapi.yaml) — OBIE Read/Write AIS v4.0, shared standard
-- [Documentation](https://openbankinguk.github.io/read-write-api-site3/)
-
-### UK Open Banking Payment Initiation API (OBIE Standard)
-
-Shared OBIE Read/Write Payment Initiation (PIS) standard, FAPI-secured with OAuth2/OIDC, mutual-TLS, and PSD2 SCA.
-
-- **Human URL:** [https://github.com/OpenBankingUK/read-write-api-specs](https://github.com/OpenBankingUK/read-write-api-specs)
-- **Base URL (standard path):** `/open-banking/v4.0/pisp`
-
-#### Tags
-
-- Payment Initiation
-- PIS
-
-#### Properties
-
-- [OpenAPI](openapi/obie-payment-initiation-openapi.yaml) — OBIE Read/Write PIS v4.0, shared standard
-- [Documentation](https://openbankinguk.github.io/read-write-api-site3/)
-
-### UK Open Banking Confirmation of Funds API (OBIE Standard)
-
-Shared OBIE Read/Write Confirmation of Funds (CBPII) standard, FAPI-secured with OAuth2/OIDC, mutual-TLS, and PSD2 SCA.
-
-- **Human URL:** [https://github.com/OpenBankingUK/read-write-api-specs](https://github.com/OpenBankingUK/read-write-api-specs)
-- **Base URL (standard path):** `/open-banking/v4.0/cbpii`
-
-#### Tags
-
-- Confirmation of Funds
-- CBPII
-
-#### Properties
-
-- [OpenAPI](openapi/obie-confirmation-funds-openapi.yaml) — OBIE Read/Write CBPII v4.0, shared standard
-- [Documentation](https://openbankinguk.github.io/read-write-api-site3/)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://recognisebank.co.uk/)
-- [LinkedIn](https://www.linkedin.com/company/recognisebank/)
 - [Blog](https://recognisebank.co.uk/blog/)
-- [Blog RSS](https://recognisebank.co.uk/feed/)
-- [Terms of Service](https://recognisebank.co.uk/terms-of-use/)
-- [Privacy Policy](https://recognisebank.co.uk/privacy-notice/)
+- [Security](https://recognisebank.co.uk/responsible-disclosure-policy/)
+- [Terms of service](https://recognisebank.co.uk/terms-of-use/)
+- [Privacy policy](https://recognisebank.co.uk/privacy-notice/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 35.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 46.9 |
+| Contract governance | 4.5 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 31.0 |
+| Access clarity | 21.1 |
+
+**Agent readiness 32.7** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | verified |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | verified |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 48.8** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/recognise-bank/](https://apis.io/providers/recognise-bank/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Recognise Bank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/recognise-bank/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
